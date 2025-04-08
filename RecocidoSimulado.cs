@@ -97,9 +97,9 @@ public class OptimizedSimulatedAnnealing : MonoBehaviour
                     break;
                 }
 
-                if (reloj.Elapsed.TotalMinutes >= 5) 
+                if (reloj.Elapsed.TotalMinutes >= 5) //Modificar la cantidad de minutos por lo que quiera que dure la búsqueda
                 {
-                    Debug.Log("Tiempo máximo de ejecución alcanzado (5 minutos)");
+                    Debug.Log("Tiempo máximo de ejecución alcanzado (5 minutos)"); // También aquí.
                     return;
                 }
             }
@@ -262,7 +262,7 @@ public class OptimizedSimulatedAnnealing : MonoBehaviour
         return energiaTotal;
     }
 
-    string MatrizAHash(int[,] matriz)
+    string MatrizAHash(int[,] matriz) //Esta función convierte el tablero en una cadena de texto única para evitar duplicados
     {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < filas; i++)
